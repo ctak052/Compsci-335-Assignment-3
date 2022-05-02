@@ -4,6 +4,8 @@ import StaffCard from "./StaffCard";
 import Loading from "./Loading";
 import PageTemplate from "../PageTemplate";
 import { fetchJson } from "../../api/fetch";
+import LoadingSpinner from "../atoms/LoadingSpinner";
+import { colours } from "../constants/colours";
 
 const Staff = () => {
   const [staffList, setStaffList] = useState([]);
@@ -45,7 +47,7 @@ const Staff = () => {
     <PageTemplate>
       <div>
 
-        {staffList.length === 0 ? (<Loading />) : (
+        {staffList.length === 0 ? (<LoadingSpinner colour={colours.tertiary} />) : (
           staffList.map((staffJson) => (
             <StaffCard key={staffJson.name} staff={staffJson} />
           )) 
