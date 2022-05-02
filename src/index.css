@@ -1,0 +1,188 @@
+html{
+	min-width: 540px;
+}
+
+body{
+	font-size: 18px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	
+	
+}
+
+nav ul li a{
+	text-decoration: none;
+}
+
+
+nav ul li:hover{
+	text-decoration: none;
+}
+
+nav, #contents{
+	max-width: 1200px;
+	width: 100%;
+	height: 100%;
+}
+
+#contents{
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+	height: 100%;
+}
+
+header{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: gray;
+}
+
+#user_button{
+	float:right;
+	margin:20px 30px 0px 0;
+}
+
+.btn_default{
+	background-color: #0398fc;
+	border: #0c4369 1px solid;
+	border-radius: 16px;
+	padding: 7px 10px;
+	margin: 8px;
+	color: white;
+	cursor: pointer;
+}
+
+.btn_default:hover{
+	background-color: #4db2f7;
+	border: #33546b 1px solid;
+	
+}
+
+.lg{
+	font-size: 22px;
+}
+
+.md{
+	font-size: 18px;
+}
+
+.sm{
+	font-size: 14px;
+	padding: 5px 8px;
+}
+
+footer{
+	width:30%;
+	margin:auto;
+	margin-top: 30px;
+	border-top: #dedede 1px solid;
+	padding-top: 5px;
+	text-align: center;
+}
+
+#page_title_header{
+	overflow: auto;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	border-bottom: black 3px solid;
+}
+
+.staff_display, .product_display{
+	display: flex;
+	margin: 20px 25px 10px 25px;
+	border-bottom: #ebebeb 2px solid;
+	padding-bottom: 10px
+}
+
+.staff_text_display, .product_text{
+	margin-left: 20px
+}
+
+.staff_text_display h4, .product_text h4{
+	font-weight: 500;
+}
+
+.staff_text_display a{
+	color: black;
+	text-decoration: none;
+}
+
+#comment_form{
+	width: 100%;
+	padding: 15px;
+}
+
+#name_input{
+	width: 300px;
+}
+
+#comments-iframe{
+	width: 80%;
+	color: black;
+	height: 100%;
+}
+
+#overpage_display{
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+	height: 100px;
+	width: 80%;
+	margin: auto;
+	max-width: 960px;
+	background-color: #88b6e3;
+	opacity: 1;
+	padding: 10px;
+	border-radius: 10px;
+	border: #2f4559 2px solid;
+	display: none;
+}
+
+#x_button{
+	background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+	font-size: 15px;
+	font-weight:900;
+}
+
+#overpage_contents{
+	font-weight: 500;
+}
+
+#x_button:hover{
+	cursor: pointer;
+}
+
+#comment_error_display{
+	font-weight: 600;
+}
+
+#search-input{
+	width: 80%;
+	font-size: 20px
+}
+
+#register_login_form{
+	padding: 15px;
+	border-right: #ebebeb 1px solid
+}
+
+#register_login_form h4{
+	margin-bottom: 0px;
+}

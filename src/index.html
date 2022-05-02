@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHIT Assignment</title>
+  <link rel="icon" href="http://localhost:5000/logo-192x192.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<img src="http://localhost:5000/api/GetLogo" style="height: 100px;" alt="Southern Hemisphere Institute Of Technology Logo">
+			<ul>
+				<li><a class="btn_default lg" onclick="home_clicked()">Home</a></li>
+				<li><a class="btn_default lg" onclick="staff_clicked()">Staff</a></li>
+				<li><a class="btn_default lg" onclick="shop_clicked()">Shop</a></li>
+				<li><a class="btn_default lg" onclick="guest_book_clicked()">Guest Book</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="contents">
+		<div id="overpage_display">
+			<button id="x_button" onclick='document.getElementById("overpage_display").style.display="none"'>X</button>
+			<div id="overpage_contents"></div>
+		</div>
+		<div id="page_title_header">
+			<h1 id="page_title" style="float:left;">Southern Hemisphere Institute of Technology</h1>
+			<div id="user_button">
+				<button class="btn_default lg" id="login_button" onclick="login_click()">Login/Register</button>
+			</div>
+		</div>
+		<div id="home_page" style="display: visible; width: 100%">
+			<p>
+				Welcome to Southern Hemisphere Institute Of Technology, more commonly known as "SHIT"! We are a high end education facility that come from the rarest end of the world!
+				New Zealand! We are dedicated to providing the best experience to our community.
+			</p>
+			<div style="width: 100%; text-align: center;">
+				<img src="http://localhost:5000/api/GetLogo" style="width: 50%" alt="Southern Hemisphere Institute Of Technology Logo">
+				<h4 style="margin-top:0;">Commited to providing the classic SHIT experience!</h4>
+			</div>
+		</div>
+		
+		<div id="staff_page" style="display: none; width: 100%">
+
+			<div id="staff_contents">
+				<h2> Loading... </h2>
+			</div>
+		</div>
+		
+		<div id="shop_page" style="display: none; width: 100%">
+			<input name="search-input" id="search-input" onkeyup="search_input_updated()" placeholder="Search for a Product">
+			<div id="product-lists">
+				<h2> Loading... </h2>
+			</div>
+		</div>
+		
+		<div id="guest_page" style="display: none; width: 100%">
+			<h3>Please sign our guest book to let us, and others know who visited!</h3>
+			<h5>Please respect others at all times, especially when posting comments</h5>
+			<div id="comment_form">
+				<div style="width: 100%">
+					<textarea id="comment_textarea" rows="8" style="width: 90%;" placeholder="Start typing your comment here"></textarea>
+				</div>
+				<label for="name_input">Your Name: <input id="name_input" name="name_input"> </label>
+				<button onclick="submit_comment()" class="btn_default md">Submit</button>
+				<div id="comment_error_display" style="text-align:center;"></div>
+			</div>
+			<div style="display:flex;align-items: center;justify-content: center;">
+				<iframe src="http://localhost:5000/api/GetComments" scrolling="yes" id="comments-iframe"></iframe>
+			</div>
+		</div>
+		
+		<div id="login_register_page" style="display: none; width: 100%">
+			<div style="display: flex;align-items: center;flex-direction:column;">
+				<h3 id="login_title"></h3>
+				<div style="display:flex;justify-content: center;">
+					<div id="register_login_form">
+						<label for="username"><h4> Username: </h4><input name="username" id="username"></label>
+						<label for="password"><h4> Password: </h4><input type="password" name="password" id="password"></label>
+						<div id ="address_container">
+							<label for="address"><h4>  Address(optional):</h4>  <input name="address" id="address"></label>
+						</div>
+						<div id="login_register_error"></div>
+						<div id="login_submit_button"> </div>
+					</div>
+					<div style="padding: 15px; display: flex;justify-content: center;align-items: center;flex-direction:column;">
+						<div id="button_label"></div>
+						<div id="login_register">
+						
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<footer>
+	</footer>
+</body>
+<script src="index.js"></script>
+</html>
