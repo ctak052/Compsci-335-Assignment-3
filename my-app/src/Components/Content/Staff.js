@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getStaff, staffAPI } from "../../api/staffAPI";
+import { staffAPI } from "../../api/staffAPI";
 import StaffCard from "./StaffCard";
-import Loading from "./Loading";
 import PageTemplate from "../PageTemplate";
-import { fetchJson } from "../../api/fetch";
 import LoadingSpinner from "../atoms/LoadingSpinner";
 import { colours } from "../constants/colours";
 

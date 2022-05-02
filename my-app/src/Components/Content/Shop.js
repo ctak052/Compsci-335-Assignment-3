@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { productAPI } from "../../api/productAPI";
-import Loading from "./Loading";
 import PageTemplate from "../PageTemplate";
 import LoadingSpinner from "../atoms/LoadingSpinner";
 import { colours } from "../constants/colours";
