@@ -1,8 +1,8 @@
 import './Content.css'
-import Home from './Home'
-import Staff from './Staff'
-import Shop from './Shop'
-import GuestBook from './GuestBook'
+import Home from '../../Pages/Home/Home'
+import Staff from '../../Pages/Staff/Staff'
+import Shop from '../../Pages/Shop/Shop'
+import GuestBook from '../../Pages/GuestBook/GuestBook'
 import PageTitle from './PageTitle'
 
 const Content = (props) => {

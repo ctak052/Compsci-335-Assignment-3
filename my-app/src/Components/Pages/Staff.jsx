@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { staffAPI } from "../../api/staffAPI";
-import StaffCard from "./StaffCard";
-import PageTemplate from "../PageTemplate";
+import StaffCard from "../molecules/StaffCard/StaffCard"
+import PageTemplate from "../organisms/PageTemplate/PageTemplate";
 import LoadingSpinner from "../atoms/LoadingSpinner";
 import { colours } from "../constants/colours";
 
-const Staff = () => {
+const Staff = (props) => {
   const [staffList, setStaffList] = useState([]);
-  console.log("pageReloaded", staffList.length);
   useEffect(() => {
     const fetchStaffList = async () => {
       const staff = await staffAPI.fetchStaff();
@@ -30,7 +29,7 @@ const Staff = () => {
       newStaff.name = vCard_lines[3].slice(3);
       newStaff.telNumber = vCard_lines[7].slice(4);
       newStaff.email = vCard_lines[6].slice(16);
-      newStaff.categories = vCard_lines[9].slice(11);
+      newStaff.categories = (vCard_lines[9].slice(11)).replace(/,/g, ", ");
 
       newStaff.vCardURL = `http://localhost:5000/api/GetCard/${vCard_lines[4].slice(
         4
@@ -40,15 +39,16 @@ const Staff = () => {
 
     fetchStaffList();
   }, [staffList]);
-  
-  return (
-    <PageTemplate>
-      <div>
 
-        {staffList.length === 0 ? (<LoadingSpinner colour={colours.tertiary} />) : (
+  return (
+    <PageTemplate title="Staff" version={props.version}>
+      <div>
+        {staffList.length === 0 ? (
+          <LoadingSpinner colour={colours.tertiary} />
+        ) : (
           staffList.map((staffJson) => (
             <StaffCard key={staffJson.name} staff={staffJson} />
-          )) 
+          ))
         )}
       </div>
     </PageTemplate>

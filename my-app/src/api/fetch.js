@@ -7,11 +7,18 @@ const fetchJson = async (url) => {
 };
 
 const fetchText = (url) => {
-  const fakePromise = fetch(url, {
+  return fetch(url, {
     method: "GET",
   }).then((response) => response.text());
-
-  return fakePromise;
 };
 
-export { fetchJson, fetchText };
+const postJson = (url, body) => {
+  return fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: body,
+  });
+};
+export { fetchJson, fetchText, postJson };

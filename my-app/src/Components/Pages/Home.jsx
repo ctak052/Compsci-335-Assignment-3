@@ -1,10 +1,9 @@
-import PageTemplate from "../PageTemplate";
-import "../../App.css";
+import PageTemplate from "../organisms/PageTemplate/PageTemplate";
 
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <PageTemplate>
+    <PageTemplate title="Southern Hemisphere Institute of Technology" version={props.version}>
       <div id="home_page" style={{display: "visible", width: "100%"}}>
         <p>
           Welcome to Southern Hemisphere Institute Of Technology, more commonly
